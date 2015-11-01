@@ -51,7 +51,8 @@ public class Test {
 		// longestCommonSubsequene("AGGTAB","GXTXAYB");
 
 		//maxIncreaseSubsequence();
-		longestIncreasingSubsequenceLenght();
+		//longestIncreasingSubsequenceLenght();
+		contiguourSum();
 
 	}
 
@@ -193,4 +194,32 @@ public class Test {
 		System.out.println("The longest length is   " + tempArray[tempArray.length - 1]);
 	}
 
+	public static void contiguourSum(){
+		int[] arr = {-2,-3,4,-1,-2,1,5,-3};
+		
+		int[] temp = new int[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			temp[i] = 0;
+		}
+		int j = 0;
+		for( j = 0; j < arr.length; j++){
+		if(arr[j] < 0){
+			temp[j] = 0;
+		}else
+			break;
+		}
+		
+		for(int i = j; i < arr.length; i++){
+				int tmp = temp[i - 1] + arr[i];
+				if(arr[i] <= tmp){
+					temp[i] = tmp;
+				
+			}
+		}
+		
+		System.out.println();
+		Arrays.sort(temp);
+		System.out.println("The height contiguous sum is    " + temp[temp.length - 1]);
+		
+	}
 }
