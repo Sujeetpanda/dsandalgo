@@ -1,3 +1,18 @@
+
+/*
+ Sort the list as per the descending order  of profit.
+ Take the first task
+ check if the any of the remaining tasks can be accomodated in the list
+ (if the task - 1 cell is empty then add and make the cell as occupied. Similarly if the cell from 0 to that cell is empty we can
+ add the task other wise skip it)
+ 
+ 
+ Referecne.
+ https://www.youtube.com/watch?v=yHsDLU3ZqNM
+
+
+
+
 package com.sujeet.algo.greedy;
 
 import java.util.ArrayList;
